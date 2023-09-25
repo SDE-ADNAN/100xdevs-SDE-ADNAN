@@ -1,0 +1,110 @@
+# Ignore Node.js related files and directories
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Ignore build and output directories
+build/
+dist/
+out/
+
+# Ignore environment-specific files
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+.env*.local
+
+# Ignore editor-specific files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# Ignore OS-generated files
+.DS_Store
+Thumbs.db
+
+# Ignore log files and error reports
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignore dependency directories
+/jspm_packages/
+/bower_components/
+
+# Ignore test coverage output
+/coverage/
+
+# Ignore generated files
+*.generated.js
+
+# Ignore package build output
+/dist/
+/lib/
+/compiled/
+/out-tsc/
+/coverage/
+.next/
+.build/
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore yarn specific files
+.yarn/*
+!*.yarn/integrity
+!*.yarn/unplugged
+
+# Ignore pnpm debug logs
+pnpm-debug.log*
+
+# Ignore Mac ._* files
+._*
+
+# Ignore Gradle-specific files
+.gradle/
+build/
+
+# Ignore Visual Studio Code settings
+.vscode/
+
+# Ignore editor/IDE specific files
+*.sublime-project
+*.sublime-workspace
+*.idea/
+*.code-workspace
+
+# Ignore OS generated files
+ehthumbs.db
+Thumbs.db
+
+# Ignore npm package manager lock files
+npm-debug.log
+npm-error.log
+.pnpm-lock.yaml
+.pnpmfile.cjs
+
+# Ignore Yarn package manager lock files
+yarn-error.log
+yarn.lock
+
+# Ignore ESLint cache
+.eslintcache
+
+# Ignore macOS folder attributes
+.DS_Store
+
+# Ignore Firebase configuration files
+firebase.json
+.firebaserc
