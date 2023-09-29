@@ -7,8 +7,12 @@
         "strictNullChecks": true,
         "strictFunctionTypes": true
     },
+    "include": [
+        "week-01/Patterns/**/*"
+    ],
     "exclude": [
         "node_modules",
         "**/node_modules/*"
     ]
 }
+
