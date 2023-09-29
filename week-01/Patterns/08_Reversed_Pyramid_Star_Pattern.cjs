@@ -48,3 +48,4 @@ function invertedPyramidPattern2(n) {
 CalculatePerformance(()=>invertedPyramidPattern2(5),'#2')
 
 module.exports = CalculatePerformance;
+module.exports = invertedPyramidPattern;
