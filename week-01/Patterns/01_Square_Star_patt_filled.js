@@ -11,6 +11,8 @@ Print the following pattern for given number of rows.
 
 */
 
+import { CalculatePerformance } from "./08_Reversed_Pyramid_Star_Pattern.cjs";
+
 
 const  printSquareStars=(n)=>{
     // first for loop for rows
@@ -24,4 +26,4 @@ const  printSquareStars=(n)=>{
     }
 }
 
-printSquareStars(5);
+CalculatePerformance(()=>printSquareStars(5),'#001') ;
