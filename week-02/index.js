@@ -1,4 +1,18 @@
 const fs = require('fs');
+const express = require("express");
+const app = express();
+const port = 3000;
+
+function handleFirstRequest(req,res){
+    res.send('Hello world!');
+}
+
+app.get('/', handleFirstRequest);
+
+function started(){
+    console.log('Example app listning on .... port '+port);
+
+}
 
 function callbackFn(err,data){
     console.log(data);
@@ -15,3 +29,6 @@ function calculateSum(counter){
 
 var calculatedSum = calculateSum(100);
 console.log(calculatedSum)
+
+
+app.listen(port, started)
