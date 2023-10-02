@@ -17,6 +17,20 @@ function handleFirstRequest(req,res){
     res.send('Hello world!');
 }
 
+function givePage(req,res){
+    res.send(`<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hello</title>
+    </head>
+    <body>
+        <p>Hi there from html file..</p>
+    </body>
+    </html>`)
+}
+
 function calculateMul(n){
     let sum =1;
     for(var i =1;i<=n;i++){
@@ -33,6 +47,7 @@ function postGetTotal(req,res){
 
 // app.get('/', handleFirstRequest);
 // app.post('/',postGetTotal);
+app.get('/givep',givePage)
 app.post('/',(req,res)=>{
     console.log(req.body.count)
     const n = req.body.count
