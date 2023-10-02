@@ -7,7 +7,15 @@ function handleFirstRequest(req,res){
     res.send('Hello world!');
 }
 
+function postGetTotal(req,res){
+    res.send('post getTotal called')
+}
+
 app.get('/', handleFirstRequest);
+app.post('/getTotal',postGetTotal);
+app.put('/putGetTotal',(req,res)=>{
+    res.send("putGetTotal called")
+})
 
 function started(){
     console.log('Example app listning on .... port '+port);
