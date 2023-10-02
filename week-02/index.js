@@ -31,6 +31,15 @@ function givePage(req,res){
     </html>`)
 }
 
+function handleSum(req,res){
+    const n = req.query.count
+    const sum = (n*n+1)/2;
+    let resObj={
+        sum
+    }
+    res.send(resObj)
+}
+
 function calculateMul(n){
     let sum =1;
     for(var i =1;i<=n;i++){
@@ -45,7 +54,7 @@ function postGetTotal(req,res){
     res.send('the total is : '+ calculateSum(parseInt(count)));
 }
 
-// app.get('/', handleFirstRequest);
+app.get('/handleSum', handleSum);
 // app.post('/',postGetTotal);
 app.get('/givep',givePage)
 app.post('/',(req,res)=>{
