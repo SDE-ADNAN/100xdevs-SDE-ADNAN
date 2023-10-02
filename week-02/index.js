@@ -8,15 +8,15 @@ function handleFirstRequest(req,res){
 }
 
 function postGetTotal(req,res){
-    const count = req.query.count
+    const count = req.headers.count
     res.send('the total is : '+ calculateSum(parseInt(count)))
 }
 
-app.get('/', handleFirstRequest);
-app.post('/getTotal',postGetTotal);
-app.put('/putGetTotal',(req,res)=>{
-    res.send("putGetTotal called")
-})
+// app.get('/', handleFirstRequest);
+app.post('/',postGetTotal);
+// app.put('/putGetTotal',(req,res)=>{
+//     res.send("putGetTotal called")
+// })
 
 function started(){
     console.log('Example app listning on .... port '+port);
