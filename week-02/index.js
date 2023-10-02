@@ -17,6 +17,14 @@ function handleFirstRequest(req,res){
     res.send('Hello world!');
 }
 
+function calculateMul(n){
+    let sum =1;
+    for(var i =1;i<=n;i++){
+        sum = sum * i;
+    }
+    return sum;
+}
+
 function postGetTotal(req,res){
     console.log(req.body);
     const count = req.body.count;
@@ -26,11 +34,13 @@ function postGetTotal(req,res){
 // app.get('/', handleFirstRequest);
 // app.post('/',postGetTotal);
 app.post('/',(req,res)=>{
+    console.log(req.body.count)
     const n = req.body.count
+    console.log(calculateMul(n))
     if(n>1000){
         res.status(411).send("you have sent a very big number to calculate! give below 1000")
     }else{
-        let sum = `${(n * (n+1)) / 2}`
+        let sum = calculateMul(n)
         const resObj={
             sum:sum
         }
