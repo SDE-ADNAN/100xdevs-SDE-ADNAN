@@ -22,10 +22,10 @@ function started(){
 
 }
 
-function callbackFn(err,data){
-    console.log(data);
-}
-fs.readFile("a.txt","utf-8",callbackFn)
+// function callbackFn(err,data){
+//     console.log(data);
+// }
+// fs.readFile("a.txt","utf-8",callbackFn)
 
 function calculateSum(counter){
     var sum = 0;
