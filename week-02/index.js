@@ -8,7 +8,8 @@ function handleFirstRequest(req,res){
 }
 
 function postGetTotal(req,res){
-    res.send('post getTotal called')
+    const count = req.query.count
+    res.send('the total is : '+ calculateSum(parseInt(count)))
 }
 
 app.get('/', handleFirstRequest);
@@ -27,12 +28,12 @@ function started(){
 // }
 // fs.readFile("a.txt","utf-8",callbackFn)
 
-function calculateSum(counter){
-    var sum = 0;
-    for(var i=0; i<counter;i++){
-        sum = sum + i;
-    }
-    return sum;
+function calculateSum(n){
+    // var sum = 0;
+    // for(var i=1; i<n;i++){
+    //     sum = sum + i;
+    // }
+    return (n * (n+1)) / 2;
 }
 
 var calculatedSum = calculateSum(100);
