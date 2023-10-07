@@ -11,6 +11,13 @@
     function onPress(){
         fetch("http://localhost:3000/todos",{
             method:"post",
+            body:JSON.stringify({
+                    title:'go to gym',
+                    description:' adnan need to attend gym today '
+                }),
+            headers:{
+                "Content-Type":"application/json"
+            }
         }).then(async x => {
             console.log(await x.json())
         })
