@@ -9,18 +9,18 @@
         res.json().then(parsedResponse)
     }
     function onPress(){
+        var title = document.getElementById('title').value;
+        var description = document.getElementById('description').value
         fetch("http://localhost:3000/todos",{
             method:"post",
             body:JSON.stringify({
-                    title:'go to gym',
-                    description:' adnan need to attend gym today '
+                    title:title.trim(),
+                    description:description.trim()
                 }),
             headers:{
                 "Content-Type":"application/json"
             }
-        }).then(async x => {
-            console.log(await x.json())
-        })
+        }).then(callback)
     }
 </script>
 <body>
