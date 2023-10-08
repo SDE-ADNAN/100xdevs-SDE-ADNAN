@@ -2,6 +2,23 @@
     <title>todo app </title>
 </head>
 <script>
+
+    // for getting all the todos
+    function todosCallback(data){
+        console.log(data)
+    }
+
+    function callback2(res){
+        res.json().then(todosCallback)
+    }
+
+    function getData(){
+        fetch("http://localhost:3000/todos", {
+            method: "GET"
+        }).then(callback2)
+    }
+
+    // for post todos
     function parsedResponse(data){
         console.log(data)
     }
