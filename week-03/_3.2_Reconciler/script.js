@@ -1,6 +1,7 @@
 function createDomElements(todos){
     var parentElement = document.getElementById('mainArea');
     // parentElement.innerHTML = JSON.stringify(todos)
+    parentElement.innerHTML ='';
     for(let i = 0; i<=todos.length;i++){
         var childElement = document.createElement('div');
 
@@ -22,8 +23,14 @@ function createDomElements(todos){
     }
 }
 
-createDomElements([
-    {
-        title: 'This is the title...', description: 'This is the description...'
+window.setInterval(()=>{
+    let todos = [];
+    for(let i = 0; i<Math.floor(Math.random()*100);i++){
+        todos.push({
+            title:'Go to gym',
+            description:'Hit the gym at 8:00',
+            id:i+1
+        })
     }
-])
+    createDomElements(todos)
+},1000);
