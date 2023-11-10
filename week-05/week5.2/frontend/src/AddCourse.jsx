@@ -32,7 +32,6 @@ function AddCourse() {
             variant="contained"
             onClick={() => {
                 function callback2(data) {
-                    localStorage.setItem("token", data.token);
                 }
                 function callback1(res) {
                     res.json().then(callback2)
@@ -50,7 +49,7 @@ function AddCourse() {
                         "Authorization": "Bearer " + localStorage.getItem("token")
                     }
                 })
-                    .then(callback1)
+                .then(callback1)
             }}
         > Add course</Button>
         </Card>

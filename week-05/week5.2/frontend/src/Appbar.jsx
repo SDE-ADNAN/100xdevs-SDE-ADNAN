@@ -1,17 +1,18 @@
 import {Typography} from "@mui/material";
 import Button from "@mui/material/Button";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import {useNavigate} from "react-router-dom";
 
 function Appbar() {
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+    const [userEmail,setUserEmail] = useState(null);
 
     useEffect(()=>{
         fetch('http://localhost:3000/admin/me',{
             headers: {
                 "Authorization": "Bearer " + localStorage.getItem("token")
             }
-        }).then((res)=>res.json().then(data=>console.log(data)))
+        }).then((res)=>res.json().then(data=>setUserEmail(data.username)))
     },[])
     return <div style={{
         display: "flex",
@@ -38,6 +39,14 @@ function Appbar() {
                         navigate("/signin")
                     }}
                 >Signin</Button>
+            </div>
+            <div style={{marginRight: 10,marginLeft:10}}>
+                <Button
+                    variant={"contained"}
+                    onClick={() => {
+                        navigate("/addcourse")
+                    }}
+                >Add Course</Button>
             </div>
         </div>
     </div>
