@@ -48,6 +48,14 @@ function Appbar() {
                     }}
                 >Add Course</Button>
             </div>
+            <div style={{marginRight: 10,marginLeft:10}}>
+                <Button
+                    variant={"contained"}
+                    onClick={() => {
+                        navigate("/courses")
+                    }}
+                >course</Button>
+            </div>
         </div>
     </div>
 }
