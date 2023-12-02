@@ -42,6 +42,7 @@ function App() {
 
 
 function InitUser() {
+    // useSetRecoilState for updating state
     const setUser = useSetRecoilState(userState);
     const init = async() => {
         try {

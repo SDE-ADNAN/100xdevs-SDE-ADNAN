@@ -7,6 +7,7 @@ import { userState } from "../store/atoms/user.js";
 import { userEmailState } from "../store/selectors/userEmail"
 
 function Appbar({}) {
+    // useRecoilValue is for using the state and useSetTecoilState is for updating the state.
     const navigate = useNavigate()
     const userLoading = useRecoilValue(isUserLoading);
     const userEmail = useRecoilValue(userEmailState);
@@ -51,6 +52,7 @@ function Appbar({}) {
                         variant={"contained"}
                         onClick={() => {
                             localStorage.setItem("token", null);
+                            // setUser just works normally like the stateModifier of reacts useState
                             setUser({
                                 isLoading: false,
                                 userEmail: null
