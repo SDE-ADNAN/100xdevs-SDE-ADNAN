@@ -17,7 +17,8 @@ import {useEffect} from "react";
 
 function App() {
     return (
-        <RecoilRoot>
+        // added recoil root wrapper to our entire app to make the state available to each part of app
+        <RecoilRoot> 
             <div style={{width: "100vw",
                 height: "100vh",
                 backgroundColor: "#eeeeee"}}
