@@ -1,5 +1,5 @@
 import { userState } from "../atoms/user";
-import {selector} from "recoil";
+import {selector,atom} from "recoil";
 import { courseState } from "../atoms/course";
 
 // the concept of selectors is that you can have a recoil state with 
@@ -59,3 +59,32 @@ export const courseImage = selector({
   },
 });
 
+
+
+
+//////////////////////////////////////////////////////
+// YOU CAN ALSO DO
+// Define atoms
+const atomA = atom({
+  key: 'atomA',
+  default: 10, // Initial value for atomA
+});
+
+const atomB = atom({
+  key: 'atomB',
+  default: 20, // Initial value for atomB
+});
+
+// Define a selector to manipulate state
+const complexStateSelector = selector({
+  key: 'complexStateSelector',
+  get: ({ get }) => {
+    const valueA = get(atomA);
+    const valueB = get(atomB);
+
+    // Perform some manipulation on the values of atomA and atomB
+    const result = valueA * 2 + valueB * 3;
+
+    return result;
+  },
+});
