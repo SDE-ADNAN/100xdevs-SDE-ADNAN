@@ -21,7 +21,10 @@ You WILL need mongoDB running locally, or a cloud mongoDB instance. Please repla
      - `module.exports = mongoose.model('Todo', todoSchema);` to
      - `export default mongoose.model('Todo', todoSchema);`
  - Now typescript shouldnt complain, but this isn't the end. We still have to flip on strict to actually see errors.
- - Check out the errors that you see
+  - Check out the errors that you see
+    `Could not find a declaration file for module 'express'. '/Users/adnankhan/Documents/100xdevs practicals/week-7/week-7.3/assignment-1/node_modules/express/index.js' implicitly has an 'any' type.
+    Try `npm i --save-dev @types/express` if it exists or add a new declaration (.d.ts) file containing `declare module 'express';`
+    import express from "express";`
  - Next, run `npm install -D @types/node` to install the types for node.
  - Next, run `npm install -D @types/express` to install the types for express.
  - Next, run `npm install -D @types/mongoose` to install the types for mongoose.
